@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+  <a [routerLink]="['/']" class="header-title">
+  <span>Популярные фильмы</span>
+</a>
+  <form (submit)="$event.preventDefault()">
+    <mat-form-field class="form">
+      <mat-label>Введите название</mat-label>
+       <input matInput #requiredFilm>
+          </mat-form-field>
+   <a [routerLink]="['/search-results', requiredFilm.value]">
+   <button mat-raised-button color="basic">Поиск фильма</button>
+  </a>
+  </form>
+  <a routerLink="/favorites" class="button-favorites-films">
+    <i class="material-icons">bookmark_border</i>Избранное
+  </a>
+</mat-toolbar>
+
+

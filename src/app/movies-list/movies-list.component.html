@@ -1,0 +1,15 @@
+
+<div class="flex-container">
+<div *ngFor="let film of films; index as itemId" class="container">
+ <mat-divider></mat-divider>
+  <a [routerLink]="['/items', itemId]">
+    <app-movie [item]="film">
+    </app-movie>
+  </a>
+  <app-button-add-to-favorites [added]="film.added" [status]="status" (filmChoosen) = "addToFavoritesButtonHandler(film)"></app-button-add-to-favorites>
+  </div>
+  <mat-paginator [length]="items.length"
+  [pageSize]="5"
+  [pageSizeOptions]="[5]" (page)="changePage($event)"></mat-paginator>
+</div>
+

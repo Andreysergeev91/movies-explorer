@@ -1,0 +1,11 @@
+
+<div *ngFor="let item of items; index as itemId" class="container">
+  <mat-divider></mat-divider>
+   <a [routerLink]="['/items', itemId]">
+     <app-movie [item]="item">
+     </app-movie>
+   </a>
+   <app-button-add-to-favorites [added]="item.added" [status]="status" (filmChoosen) = "addToFavoritesButtonHandler(item)"></app-button-add-to-favorites>
+   </div>
+
+

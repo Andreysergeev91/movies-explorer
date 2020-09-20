@@ -1,0 +1,30 @@
+.mat-card {
+  border: 1px solid black;
+
+}
+
+.card-link:hover {
+  transform: scale(1.003);
+  transition: transform 0.1s ease;
+}
+
+
+.movie {
+  border: none;
+  box-shadow: none;
+  display: block;
+  position: relative;
+  background: #424242;
+  color: #fff;
+  padding-bottom: 5px;
+}
+
+.poster {
+  object-fit: contain;
+  width: auto;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+
+}
+
+

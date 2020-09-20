@@ -1,0 +1,33 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <div class="film-title">
+    <mat-card-title>{{item.title}}</mat-card-title>
+    <mat-card-subtitle>{{item.original_title}}</mat-card-subtitle>
+  </div>
+  </mat-card-header>
+  <div class="film-details-container">
+  <img class="film-image" mat-card-image [src]="itemImage" alt="Photo of a Shiba Inu">
+
+  <div class="film-information">
+<p><span class="film-information-field">Название:</span> {{itemDetails.title}}</p>
+<p><span class="film-information-field">Оригинальное название:</span> {{itemDetails.original_title}}</p>
+<p><span class="film-information-field">Жанр:</span> {{this.defineGenres()}}</p>
+<p><span class="film-information-field">Бюджет:</span> {{itemDetails.budget}}$</p>
+<p><span class="film-information-field">Популярность:</span> {{itemDetails.popularity}}</p>
+<p><span class="film-information-field">Компания:</span> {{this.defineCompanies()||"неизвестно"}}</p>
+<p><span class="film-information-field">Страна:</span> {{this.defineCountries()||"неизвестно"}}</p>
+<p><span class="film-information-field">Статус:</span> {{itemDetails.status}}</p>
+<p><span class="film-information-field">Длительность:</span> {{itemDetails.runtime}} мин</p>
+<p><span class="film-information-field">Язык:</span> {{this.defineLanguages()||"неизвестно"}}</p>
+  </div>
+</div>
+  <mat-card-content>
+    <h3>Обзор</h3>
+    <p class="film-description">
+      {{this.itemDetails?.overview}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <app-button-add-to-favorites class="button-add" [added]="item.added" [status]="status" (filmChoosen) = "addToFavoritesButtonHandler(item)"></app-button-add-to-favorites>
+    </mat-card-actions>
+</mat-card>

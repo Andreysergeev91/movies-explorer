@@ -1,0 +1,13 @@
+<h2 class="favorites-film-title">Избранные фильмы</h2>
+  <div *ngFor="let item of items; index as itemId" class="container">
+    <div class="item-container" *ngIf="item.added">
+    <mat-divider></mat-divider>
+    <a [routerLink]="['/items', itemId]">
+      <app-movie [item]="item">
+      </app-movie>
+    </a>
+    <button disabled class="addButton" mat-button>Добавлено в избранное</button>
+    <button (click)="deleteFavoritesButtonHandler(item, $event)" class="addButton" mat-button>{{deleteStatus}}</button>
+  </div>
+    </div>
+

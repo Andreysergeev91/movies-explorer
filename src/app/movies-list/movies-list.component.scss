@@ -1,0 +1,35 @@
+
+.container {
+  border: 1px solid black;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+  position: relative;
+  border-radius: 4px;
+  background: #424242;
+  color: #fff;
+  margin-bottom: 1px;
+  width: 99.7%;
+
+
+}
+
+.container:hover {
+  width: 99.4%;
+  transform: scale(1.001);
+  transition: transform 0.1s ease;
+
+
+}
+
+.addButton {
+  margin: 0 0 10px 10px;
+}
+
+.flex-container {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

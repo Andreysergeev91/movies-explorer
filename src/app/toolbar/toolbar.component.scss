@@ -1,0 +1,55 @@
+mat-form-field {
+  margin-right: 12px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header-title {
+  color: white;
+  font-size: 27px;
+  position: absolute;
+  left: 30px;
+
+}
+
+.mat-toolbar {
+  display: flex;
+  min-height: 90px;
+  position: relative;
+  justify-content: center;
+
+}
+
+.button-favorites-films {
+  position: absolute;
+  right: 30px;
+  color: white;
+  font-size: 20px;
+}
+
+mat-label {
+  font-size: 16px;
+}
+
+@media screen and (max-width:720px) {
+  .mat-toolbar {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 50px;
+    height: auto;
+    padding-bottom: 10px;
+  }
+
+  .button-favorites-films {
+    position: relative;
+    right: auto;
+  }
+
+  .header-title {
+    position: relative;
+    left: auto;
+  }
+}
