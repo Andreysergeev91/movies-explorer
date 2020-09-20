@@ -20,7 +20,7 @@ export class MoviesListComponent implements OnInit {
   ngOnInit() {
     this.movieService.getMoviesList(1).subscribe((res: any) => {
       this.items = res.results;
-      const added = JSON.parse(this.movieService.getFavorites()).items;
+      const added = JSON.parse(this.movieService.getFavorites()) ? JSON.parse(this.movieService.getFavorites()).items : [];
       this.items.forEach(item => {
         item.added = false;
         for (let i: number = 0; i < added.length; i++) {
@@ -35,7 +35,7 @@ export class MoviesListComponent implements OnInit {
       this.movieService.addToItems(this.films);
     });
     this.movieService.getMoviesList(2).subscribe((res: any) => {
-      const added = JSON.parse(this.movieService.getFavorites()).items;
+      const added = JSON.parse(this.movieService.getFavorites()) ? JSON.parse(this.movieService.getFavorites()).items : [];
       res.results.forEach(item => {
         item.added = false;
         for (let i: number = 0; i < added.length; i++) {
