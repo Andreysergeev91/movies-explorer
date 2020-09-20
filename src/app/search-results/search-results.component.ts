@@ -27,7 +27,7 @@ export class SearchResultsComponent implements OnInit {
 
     this.movieService.searchFilm(this.requiredFilm).subscribe((res: any) => {
       this.items = res.results;
-      const added = JSON.parse(this.movieService.getFavorites()).items;
+      const added = JSON.parse(this.movieService.getFavorites()) ? JSON.parse(this.movieService.getFavorites()).items : [];
       this.items.forEach(item => {
         item.added = false;
         for (let i: number = 0; i < added.length; i++) {

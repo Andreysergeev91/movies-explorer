@@ -16,7 +16,7 @@ export class FavoritesFilmsComponent implements OnInit {
   constructor(private movieService: MovieService) { }
 
   ngOnInit() {
-    this.items = JSON.parse(this.movieService.getFavorites()).items;
+    this.items = JSON.parse(this.movieService.getFavorites()) ? JSON.parse(this.movieService.getFavorites()).items : [];
     this.items.forEach(item => {
       item.added = true;
   });
